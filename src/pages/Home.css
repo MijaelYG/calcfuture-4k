@@ -1,0 +1,80 @@
+.main-home{
+    position: relative;
+    width: 100vw;  
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    background-image: linear-gradient(90deg, var(--c400), var(--c700));
+}
+
+.calculator{
+    position: relative;
+    z-index: 10;
+    background-color: var(--c400);
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 10px 8px 0px var(--c700);
+}
+
+
+.view {
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.view input{
+    position: relative;
+    display: block;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--c500);
+    color: white;
+    width: 100%;
+    padding: 15px 15px;
+    font-size: 1.1rem;
+}
+.view input::placeholder{
+    color: white;
+}
+
+.btn-sets{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 20px;
+}
+
+.btn-sets button{
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    background-color: var(--c500);
+    color: var(--c100);
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.btn-sets button::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    top: 5px;
+    background-color:var(--c700);
+}
+
+.btn-sets button:active{
+    transform: translateY(5px);
+}
